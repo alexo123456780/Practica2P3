@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2 Aplicaciones Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Actividad JavaScript </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="portada.html">Portada</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Actividades de JavaScript</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Ejercicios de JavaScript</h1>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>1. Verificar edad para conducir</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="number" id="edad" class="form-control" placeholder="Ingresa tu edad">
+                            <button onclick="verificarEdad()" class="btn btn-primary">Verificar</button>
+                            <button onclick="limpiarResultado('resultadoEdad')" class="btn btn-secondary">
+                                <i class="fas fa-eraser"></i>
+                            </button>
+                        </div>
+                        <p id="resultadoEdad" class="mt-2"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>2. Calificación según nota</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="number" id="nota" class="form-control" placeholder="Ingresa la nota (0-10)">
+                            <button onclick="calcularCalificacion()" class="btn btn-primary">Calcular</button>
+                            <button onclick="limpiarResultado('resultadoNota')" class="btn btn-secondary">
+                                <i class="fas fa-eraser"></i>
+                            </button>
+                        </div>
+                        <p id="resultadoNota" class="mt-2"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>3. Concatenar cadenas</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" id="cadena" class="form-control" placeholder="Ingresa una cadena">
+                            <button onclick="agregarCadena()" class="btn btn-primary">Agregar</button>
+                            <button onclick="mostrarResultado()" class="btn btn-success">Mostrar</button>
+                            <button onclick="limpiarCadenas()" class="btn btn-secondary">
+                                <i class="fas fa-eraser"></i>
+                            </button>
+                        </div>
+                        <p id="resultadoCadenas" class="mt-2"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>4. Calcular letra DNI</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="number" id="dni" class="form-control" placeholder="Ingresa el número de DNI">
+                            <button onclick="calcularLetraDNI()" class="btn btn-primary">Calcular</button>
+                            <button onclick="limpiarResultado('resultadoDNI')" class="btn btn-danger btn-borrar">
+                                <i class="fas fa-eraser"></i>
+                            </button>
+                        </div>
+                        <p id="resultadoDNI" class="mt-2"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
